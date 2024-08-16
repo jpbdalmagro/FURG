@@ -1,3 +1,5 @@
+#Faça um programa em python que desenhe uma pirâmide conforme 2 dados informados pelo usuário. O primeiro dado indica o "tijolo" e o segundo a quantidade de andares.
+
 cont = 1
 
 tijolo = input("Digite um caractere: ")
