@@ -1,3 +1,14 @@
+'''Faça um programa em python que pergunte ao usuário o seguinte:
+A viagem custará menos de R$ 30?
+- Terá Wifi?
+- Terá piscina?
+- Terá churrasqueira?
+O programa deverá mostrar se a viagem ocorrerá de acordo com as seguintes regras:
+- Deverá custar menos de R$ 30
+- Tem que ter wifi e piscina
+- Se não tiver wifi ou piscina, tem que ter churrasqueira'''
+
+
 cont = 0
 
 valor = int(input("Digite quanto custará a viagem: "))
