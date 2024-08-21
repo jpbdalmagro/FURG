@@ -1,3 +1,5 @@
+#Faça um programa em python que leia o nome de 4 times de futebol que estão em uma semifinal. Após, leia os gols das duas partidas: time1 x time2 e time3 x time4. Os times vencedores devem ir para
+# a final. Caso haja empate, deve-se perguntar ao usuároi qual time se classificou. Por fim, deve-se ler os gols da final e mostrar qual time foi campeão. (Se empatar, perguntar quem foi o campeão)
 print("Digite os 4 semifinalistas:"
 		"\nTIME A X TIME B"
 		"\nTIME C X TIME D")
