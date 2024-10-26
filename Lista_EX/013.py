@@ -1,3 +1,5 @@
+# Escreva um programa que mostre a tabuada (0 a 10) de um número fornecido pelo usuário
+
 cont = 1
 
 num = int(input("Digite um  número para ver a tabuada: "))
