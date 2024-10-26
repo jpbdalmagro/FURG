@@ -1,3 +1,5 @@
+# Escreva um programa que mostre a sequência de Fibonacci até o enésimo termo (n deve ser informado pelo usuário).
+
 t1 = 0
 t2 = 1
 cont = 2
