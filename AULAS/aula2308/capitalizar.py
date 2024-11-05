@@ -5,7 +5,6 @@ nome_cap = nome_sep = ''
 nome = str(input("Digite seu nome completo em letras minusculas: "))
 nome += ' '
 
-
 while cont < len(nome):
     char = nome[cont]
     if not char == ' ':
