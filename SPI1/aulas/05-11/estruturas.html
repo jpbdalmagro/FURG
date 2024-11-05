@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estruturas</title>
+    <script type="text/javascript" language="javascript">
+        // condicionais
+        
+        var x = 21;
+
+        if(x < 10){
+            document.write("X é menor que 10")
+        }else if (x > 10 && x <20){
+            document.write("X está entre 10 e 20")
+        }else{
+            document.write("X é maior que 20 <br/>")
+        }
+        
+        //operador ternário
+        var idade = 21
+        
+        var x = idade < 18? "Menor de idade": "Maior de idade"
+
+        alert(x)
+
+        // switch case
+        var dia = new Date().getDay();
+
+        switch(dia){
+            case 0:
+                x = "Hoje é Domingo";
+                break;
+            case 1:
+                x = "Hoje é Segunda";
+                break;
+            case 2:
+                x = "Hoje é Terça";
+                break;
+            case 3:
+                x = "Hoje é Quarta";
+                break;
+            case 4:
+                x = "Hoje é Quinta";
+                break;
+            case 5:
+                x = "Hoje é Sexta";
+                break;
+            case 6:
+                x = "Hoje é Sabado"
+        }
+
+        alert(x)
+
+        // repetições
+        // for
+        var i;
+        for(i = 0; i < 10; i++){
+            document.write(i);
+            document.write("<br/>");
+        }
+        
+        //for in
+        var pessoa ={fname: "João", lname: "da Silva", age: 25, cpf: "012.345.567-89"};
+        var x;
+        var txt = '';
+
+        for (x in pessoa){
+            txt = txt + pessoa[x] + " ";
+        }
+
+        document.write(txt)
+
+        // while
+            var i=0, x=0;
+
+            while (i < 5){
+                x = "O numero eh " + i + "<br>";
+                document.write(x);
+                i++
+            }
+
+        // do while
+
+        var i=0, x=0;
+
+        do{
+            x = "O numero eh " + i + "<br>";
+            document.write(x);
+            i++
+        }
+        while (i < 5);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

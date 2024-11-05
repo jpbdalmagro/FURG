@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Finalizando Compra</title>
+</head>
+<body>
+    <h1>Compre seu Ingresso</h1>
+    <form name="target"
+        action="dados.html"
+        target="_blank"
+        method="post">
+        <table border="1">
+            <tr>
+                <td>Nome:</td>
+                <td colspan="2"><input type="text" name="nome" size="40"></td>
+            </tr>
+            <tr>
+                <td rowspan="4">Ingressos:</td>
+                <td>Tipo:</td>
+                <td>Quantidade</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="tipo" value="superior">Arquibancada Superior</td>
+                <td><select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="tipo" value="inferior">Arquibancada Inferior</td>
+                <td><select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="tipo" value="camarote">Camarote</td>
+                <td><select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td rowspan="3">Forma de Pagamento</td>
+                <td>Tipo:</td>
+                <td>Número de Parcelas</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="pagamento" value="boleto">Boleto</td>
+                <td>A Vista</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="pagamento" value="cartao">Cartão de Crédito</td>
+                <td><select>
+                    <option value="1">1x</option>
+                    <option value="2">2x</option>
+                    <option value="3">3x</option>
+                    <option value="4">4x</option>
+                    <option value="5">5x</option>
+                    <option value="6">6x</option>
+                    <option value="7">7x</option>
+                    <option value="8">8x</option>
+                    <option value="9">9x</option>
+                    <option value="10">10x</option>
+                    <option value="11">11x</option>
+                    <option value="12">12x</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Login:</td>
+                <td colspan="2"><input type="text" name="login" size="40"></td>
+            </tr>
+            <tr>
+                <td>Senha:</td>
+                <td colspan="2"><input type="password" name="senha"></td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center"><input type="submit" value="Finalizar Compra"></td>
+        </table>
+    </form>
+</body>
+</html>

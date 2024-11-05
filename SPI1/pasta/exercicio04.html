@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="exercicio04.css">
+</head>
+<body>
+    <form name="input" action="ex01.html" method="GET">
+        <table border="1">
+            <th colspan="4">Cadastro Jogos</th>
+            <tr>
+                <td>NOME</td>
+                <td colspan="3"><input type="text" name="nome" size="40px"></td>
+            </tr>
+            <tr>
+                <td>CURSO</td>
+                <td colspan="3"><select name="Curso">
+                    <option value="empty" selected="selected"></option>
+                    <option value="SI">Sistemas de Informação</option>
+                    <option value="ECOMP">Engenharia de Computação</option>
+                    <option value="EAUTO">Engenharia de Automação</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Matricula</td>
+                <td><input type="text" name="matricula"></td>
+                <td>ANO</td>
+                <td><select name="Ano">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td colspan="5">Jogos de Preferência:</td>
+            </tr>
+            <tr>
+                <td colspan="4"><input type="checkbox" name="jogos" value="volei">Volei
+                <input type="checkbox" name="jogos" value="basquete">Basquete
+                <input type="checkbox" name="jogos" value="handball">Handball</td>
+            </tr>
+            <tr>
+                <td colspan="4"><input type="checkbox" name="jogos" value="tenis">Tenis
+                <input type="checkbox" name="jogos" value="futebol">Futebol
+                <input type="checkbox" name="jogos" value="xadrez">Xadrez</td>
+            </tr>
+            <tr>
+                <td colspan="4">Dia de Preferência:</td>
+            </tr>
+            <tr>
+                <td colspan="4"><input type="radio" name="dia" value="seg">SEG
+                <input type="radio" name="dia" value="ter">TER
+                <input type="radio" name="dia" value="qua">QUA
+                <input type="radio" name="dia" value="qui">QUI
+                <input type="radio" name="dia" value="sex">SEX</td>
+            </tr>
+            <tr>
+                <td colspan="2"><input class="botao" type="submit" value="ENVIAR"></td>
+                <td colspan="2"><input class="botao" type="reset" value="LIMPAR"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+
+table{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875em;
+    background-image: url('https://img.freepik.com/fotos-gratis/interior-da-sala-3d-com-holofotes-brilhando-fundo_1048-12168.jpg?size=626&ext=jpg');
+}
+
+td.title{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+input{
+    background-color: lightgray;
+}
+select{
+    background-color: lightgray;
+}
+
+textarea{
+    background-color: lightgray;
+    text-align: center;
+}
+
+input.botao{
+    width: 33%;
+    font-weight: bold;
+}

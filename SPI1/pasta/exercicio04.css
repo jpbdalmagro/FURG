@@ -1,0 +1,19 @@
+table{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aqua;
+    font-size: 0.8em;
+    text-align: left;
+}
+
+input.botao{
+    background-color: lightgreen;
+}
+
+input.botao:hover{
+    background-color: green;
+}
+
+input.botao:active{
+    background-color: darkgreen;
+    font-weight: bold;
+}

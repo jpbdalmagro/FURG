@@ -1,0 +1,58 @@
+
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Formulário</title>
+    <link rel="stylesheet" type="text/css" href="prova2.css">
+</head>
+<body>
+    <form action="submetido.html" method="post">
+    <table align="center">
+        <tr>
+            <td class="title" colspan="6">PREENCHA SEUS DADOS CORRETAMENTE</td>
+        </tr>
+        <tr>
+            <td>NOME:<input type="text" name="nome" size="25"></td>
+            <td>IDADE:</td>
+            <td><input type="text" name="idade"></td>
+            <td>SENHA:</td>
+            <td><input type="password" name="senha"></td>
+        </tr>
+        <tr>
+            <td colspan="6">Esportes que pratica:
+                <input class="checkbox" type="checkbox" name="esportes" value="volei">Volei
+                <input class="checkbox" type="checkbox" name="esportes" value="futebol">Futebol
+                <input class="checkbox" type="checkbox" name="esportes" value="Handball">Handball
+                Outro: <input type="text" name="outro"></td>
+        </tr>
+        <tr>
+            <td colspan="6">Gosta de doces?
+                <input type="radio" name="doce" value="sim">Sim
+                <input type="radio" name="doce" value="nao">Não</td>
+        </tr>
+        <tr>
+            <td colspan="6">Selecione duas opções de comida
+                <select name="comida" multiple>
+                <option value="lasanha">Lasanha</option>
+                <option value="pizza">Pizza</option>
+                <option value="churrasco">Churrasco</option>
+                <option value="arroz_feijao">Arroz e feijão</option>
+                <option value="frago_frito">Frango frito</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td colspan="6" align="center">
+                <textarea name="mensagem" rows="5"  cols="95">Conte uma história sobre comida</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input class="botao" type="submit" value="Enviar"></td>
+            <td></td>
+            <td colspan="3" align="left">
+                <input  class="botao" type="reset" value="Limpar"></td>
+        </tr>
+    </table>   
+    </form>
+</body>
+</html>

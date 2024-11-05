@@ -1,0 +1,71 @@
+body{
+    background-image:url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuTw5jJyTEoOIouGv0KSlJjy6UedOhkL5Ub8D2iCzLnViiGsXg4xdJ-ZRxnW7fdqAVXp8TJIfExuUKLW3LvlJ-5Xex3gJUvZYpBC-57zhyphenhyphenCxgRZcPRTs7p0-oCT9zr6FQTHhTsS97XZRtn/s1600/background.jpg");
+    background-size: cover;
+}
+
+caption{
+    font-size: 20px;
+    color: white;
+}
+
+table{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 600px;
+    height: 400px;
+}
+
+td.darkblue{
+    background-color: darkblue;
+    color: white;
+}
+
+td.lightblue{
+    background-color: lightblue;
+    color: black;
+}
+
+td.pink{
+    background-color: pink;
+    color: black;
+}
+
+td.darkgreen{
+    background-color: darkgreen;
+    color: white;
+}
+
+td.grey{
+    background-color: grey;
+    color: white;
+}
+
+td.brown{
+    background-color: brown;
+    color: white;
+}
+
+td.lilac{
+    background-color: rgb(255, 0, 255);
+    color: black;
+}
+
+td.black{
+    background-color: black;
+    color: white;
+}
+
+td.red{
+    background-color: red;
+    color: black;
+}
+
+td.lightgreen{
+    background-color: lightgreen;
+    color: black;
+}
+
+td.orange{
+    background-color: orange;
+    color: black;
+}
