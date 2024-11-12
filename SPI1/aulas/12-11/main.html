@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <script>
+
+        // Eventos de Mouse
+        
+        function myFunction(){
+            document.getElementById.innerHTML = "Hello World!";
+        }
+
+        function mouseDown(elmnt, clr){
+            elmnt.style.color = clr;
+        }
+
+        function mouseMove(e){
+            var x = e.clientX;
+            var y = e.clientY;
+            coor = "Coordenadas: (" + x + "," + y + ")";
+            document.getElementById("demo").innerHTML = coor;
+        }
+
+        function clearCoor(){
+            document.getElementById("demo").innerHTML = "";
+        }
+
+        function bigImg(x){
+            x.style.height = "512px";
+            x.style.width = "512px";
+        }
+
+        function normalImg(x){
+            x.style.height = "32px";
+            x.style.width = "32px";
+        }
+
+        // Eventos de Teclado
+
+        function keyPress(){
+            alert ("Você pressionou uma tecla!");
+        }
+
+        // Eventos de Formulário
+        
+        function onBlur(){
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+
+        function onFocus(x){
+            x.style.background = "yellow";
+        }
+    </script>
+</head>
+<body style="margin: 0px;">
+
+    <!-- Eventos de Mouse-->
+
+    <p>Clique aqui para chamar a função</p>
+    <button onclick="myFunction()">Clique Aqui</button>
+    <p id="demo"></p>
+    <br>
+    
+    <p onmousedown="mouseDown(this,'red')" onmouseup="mouseDown(this, 'green')">
+        Clique aqui para mudar a cor do texto
+    </p>
+    <br>
+
+    <div id="coordiv" style="width: 199px; height: 99px; border: 1px solid" onmousemove="mouseMove(event)" onmouseout="clearCoor"></div>
+    <p>Mova o mouse dentro do retangulo</p>
+    <p id="demo"></p>
+    <br>
+
+    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="https://fastly.4sqi.net/img/general/600x600/jLTWc_i_2HspgHrEKA2-3XYxJ1DmMhXHGRyc8OClbH0.jpg" 
+    alt="Gigante da Colina" width="32" height="32">
+    <p>Passe o mouse na imagem</p>
+
+    <!-- Eventos de Teclado-->
+
+    <p>Pressione uma tecla dentro do campo de texto</p>
+    <input type="text" onkeypress="keyPress()">
+    <br>
+    <br>
+
+    <!-- Eventos de Formulário-->
+
+    Escreva seu nome: <input type="text" id="fname" onblur="onBlur()" onfocus="onFocus(this)">
+    <p>Quando você sair do campo de texto, o texto será convertido para maiúsculo</p>
+
+</body>
+</html>
