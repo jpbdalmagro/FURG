@@ -1,5 +1,5 @@
 function validaNum(){
-    const regexp = /^(\(?[1-9]{2}\)?)\s?([2-9][0-9]{3,4})-?([0-9]{4})$/;
+    const regexp = /^(\(?\0?[1-9]{2}\)?)[- ]?(\9?[ ]? [2-9][0-9]{3})[- ]?([0-9]{4})$/;
 
     var num = document.getElementById("tel").value;
 

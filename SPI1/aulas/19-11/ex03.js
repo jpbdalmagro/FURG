@@ -6,8 +6,7 @@ function nameUpper(){
 }
 
 function validData(){
-    alert("aa")
-    const regexp = /^[0-9]{8}$ | ([0-9]{2}\/) {2} \/ [0-9]{4}$/
+    const regexp = /^[0-9]{8}$|^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/
 
     var data = document.getElementById("data").value;
 
