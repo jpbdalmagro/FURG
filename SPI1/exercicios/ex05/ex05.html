@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pares(){
+            let num = 85;
+            let soma = 0;
+
+            for (; num <= 901; num++){
+                if (num % 2 == 0){
+                    document.write(num + "<br>");
+                    soma += num;
+                }
+            }
+            document.write("A soma dos números pares é: " + soma);
+        }
+    </script> 
+</head>
+<body>
+    <button onclick="pares()">Calcular</button>
+</body>
+</html>
