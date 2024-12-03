@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <input type="text" id="inputOriginal" placeholder="Digite alguma coisa">
+    <input type="text" id="inputCopia" value="">
+
+    <script>
+        $(document).ready(function(){
+            $("#inputOriginal").on("input", function(){
+                let element = document.getElementById("inputOriginal").value;
+                $("#inputCopia").val(element);
+            });
+        });
+    </script>
+</body>
+</html>

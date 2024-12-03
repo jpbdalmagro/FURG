@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    <script src="jquery.js"> </script>
+</head>
+<body>
+    
+    <p id="p1" style="color: green;"> TESTE TESTE TESTE TESTE</p>
+    <p id="p2" style="color: red;"> TESTE TESTE TESTE TESTE</p>
+    
+    <script>
+        $(document).ready(function(){
+            $("#p1").hover(function(){$(this).css({"color": "red"}),$("#p2").css({"color": "green"})}, function(){$(this).css({"color": "green"},$("#p2").css({"color": "red"}))});
+        })
+    </script>
+</body>
+</html>
