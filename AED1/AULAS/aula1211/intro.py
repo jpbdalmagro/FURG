@@ -1,4 +1,4 @@
-import graphics as gf
+import AED1.AULAS.aula1220.graphics as gf
 
 def main():
     win = gf.GraphWin("My Window", 900, 600)
