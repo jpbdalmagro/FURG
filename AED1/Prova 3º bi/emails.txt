@@ -1,0 +1,16 @@
+joao.silva@gmail.com
+ana@dominio,com
+maria_oliveira@outlook.com
+joao.silva_gmail.com
+ana123@yahoo.com.br
+@outlook.com
+maria@@yahoo.com.br
+sem-arroba-sem-nada
+contato@empresa.com
+jose-da-silva@provedor.net
+anateste@.com
+email@dominio..com
+email.teste@sub.dominio.com
+andre.prisco@furg.br
+_teste@gmail.com
+abobrinha=@bing.gov
