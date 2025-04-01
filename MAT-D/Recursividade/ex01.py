@@ -5,8 +5,8 @@ def conta_caractere(s, c):
         return 0
     if s[0] == c:
         return 1 + conta_caractere(s[1:], c)
-    else:
-        return conta_caractere(s[1:], c)
+    
+    return conta_caractere(s[1:], c)
     
 
 string = input("Digite uma palavra: ")
