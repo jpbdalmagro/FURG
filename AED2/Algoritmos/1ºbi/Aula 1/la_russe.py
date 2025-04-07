@@ -8,4 +8,4 @@ while num_a >= 1:
     num_a = num_a // 2
     num_b *= 2
 
-print(result)  
+print(result) 
