@@ -1,24 +1,19 @@
-MULTIPLICAÇÃO(A, B)
-    shift_a = 1
-    total = 0
-    for num in A
-        mid = 0
-        shift_b = 1
-        for num_b in B
-            mid = mid + ((num * shift_a) * (num_b * shift_b))
-            shift_b = shift_b * 10
-        total = total + mid
-        shift_a = shift_a * 10
-    return total
+ALGORITHM MULTIPLICATION(A, B)
+    Input: Arrays A and B representing two numbers with digits in reverse order
+    Output: An integer representing the product of the two numbers
 
-// Inicialização dos arrays A e B
-A =
-B =
+    SHIFT_A ← 1
+    TOTAL ← 0
 
-// Inversão dos arrays A e B
-A = Inverter(A)
-B = Inverter(B)
+    for each NUM in A do
+        MID ← 0
+        SHIFT_B ← 1
+        for each NUM_B in B do
+            MID ← MID + ((NUM * SHIFT_A) * (NUM_B * SHIFT_B))
+            SHIFT_B ← SHIFT_B × 10
+        end for
+        TOTAL ← TOTAL + MID
+        SHIFT_A ← SHIFT_A × 10
+    end for
 
-// Chamada da função MULTIPLICAÇÃO e impressão do resultado
-resultado = MULTIPLICAÇÃO(A, B)
-print(resultado)
+    return TOTAL
