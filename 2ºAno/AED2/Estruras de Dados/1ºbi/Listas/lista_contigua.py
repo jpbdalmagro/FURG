@@ -1,81 +1,101 @@
-class ListaCont:
+class ListContigua:
+    def __init__(self, max_size: int):
+        self.max_size = max_size
+        self.vector = [None] * max_size
+        self.start = -1
+        self.end = -1
+        
+    def __str__(self):
+        if self.is_empty():
+            return "[]"
+        return str(self.vector[self.start : self.end + 1])
 
-    def __init__(self, max):
-        self.max = max
-        self.vetor = [None] * self.max
-        self.ini = None
-        self.end = None
+    def __getitem__(self, index):
+        return self.get(index)
+    
+    @property
+    def size(self):
+        if self.is_empty():
+            return 0
+        return self.end - self.start + 1
+        
+    def is_empty(self):
+        return self.start == -1
 
+    def is_full(self):
+        return self.size == self.max_size
 
-    def vazia(self):
-        return self.ini == None
+    def insert(self, value, index):
+        if self.is_full():
+            print(f"Erro: A lista está cheia. Não é possível inserir {value}.")
+            return
+            
+        if not (0 <= index <= self.size):
+            print(f"Erro: Índice {index} fora do intervalo válido [0, {self.size}]")
+            return
 
+        if self.is_empty():
+            self.start = self.max_size // 2
+            self.end = self.start
+            self.vector[self.start] = value
+            return
 
-    def valor(self, pos):
-        if not self.vazia() and pos < self.tam() and pos >= 0:
-            return [self.vetor + self.ini]
-
-
-    def tam(self):
-        if not self.vazia():
-            return self.fim - self.ini + 1
-        return 0
-
-
-    def pos(self, valor):
-        for i in range(self.ini, self.fim + 1):
-            if valor == self.vetor[i]:
-                return i - self.ini
-        return None    
-
-
-    def inserir(self, index, valor):
-        if index >= 0 and index <= self.tam() and self.tam() < self.max:
-            if self.vazia():
-                self.ini = self.max // 2
-                self.fim = self.max // 2
-                self.vetor[self.ini] = valor
-            elif index == 0 and self.ini != 0:
-                self.ini -= 1
-                self.vetor[self.ini] = valor
-            elif index == self.tam() and self.fim != self.max - 1:
-                self.fim += 1
-                self.vetor[self.fim] = valor
-            elif self.fim == self.max - 1:
-                self.ini -= 1
-                for i in range(self.ini, index + self.ini):
-                    self.vetor[i] = self.vetor[i + 1]
-                self.vetor[self.ini + index] = valor
-            elif self.ini == 0:
-                self.fim += 1
-                for i in range(self.fim, index, -1):
-                    self.vetor[self.fim] = self.vetor[self.fim - 1]
-                self.vetor[self.ini + index] = valor
+        if index < self.size / 2:
+            if self.start > 0:
+                self.start -= 1
+                for i in range(self.start, self.start + index):
+                    self.vector[i] = self.vector[i + 1]
             else:
-                self.ini -= 1
-                for i in range(self.ini, index + self.ini):
-                    self.vetor[i] = self.vetor[i + 1]
-                self.vetor[self.ini + index] = valor
+                self.end += 1
+                for i in range(self.end, self.start + index, -1):
+                    self.vector[i] = self.vector[i - 1]
         else:
-            return False
-
-    def adicionar(self, valor):
-        if self.tam() != self.max:
-            if self.vazia():
-                self.ini = self.max // 2
-                self.fim = self.max // 2
-                self.vetor[self.ini] = valor
-            elif self.max == self.fim:
-                self.ini -= 1
-                for i in range(self.ini, self.fim - 1):
-                    self.vetor[i] = self.vetor[i + 1]
-                self.vetor[self.fim] = valor
+            if self.end < self.max_size - 1:
+                self.end += 1
+                for i in range(self.end, self.start + index, -1):
+                    self.vector[i] = self.vector[i - 1]
             else:
-                self.vector[self.fim] = valor
-        else:
-            return False
+                self.start -= 1
+                for i in range(self.start, self.start + index):
+                    self.vector[i] = self.vector[i + 1]
+        
+        self.vector[self.start + index] = value
+        
+    def remove(self, index):
+        if self.is_empty() or not (0 <= index < self.size):
+            raise IndexError("Índice de remoção fora do intervalo válido.")
 
-    def remover(self, valor):
-        if not self.vazia and valor in self.vetor:
-            if self.ini > self.max - self.fim:
-                pass
+        removed_value = self.vector[self.start + index]
+
+        if self.size == 1:
+            self.vector[self.start] = None
+            self.start = -1
+            self.end = -1
+            return removed_value
+
+        if index < self.size / 2:
+            for i in range(self.start + index, self.start, -1):
+                self.vector[i] = self.vector[i - 1]
+            self.vector[self.start] = None
+            self.start += 1
+        else:
+            for i in range(self.start + index, self.end):
+                self.vector[i] = self.vector[i + 1]
+            self.vector[self.end] = None
+            self.end -= 1
+            
+        return removed_value
+
+    def find(self, value):
+        if self.is_empty():
+            return -1
+        
+        for i in range(self.start, self.end + 1):
+            if self.vector[i] == value:
+                return i - self.start
+        return -1
+
+    def get(self, index):
+        if not (0 <= index < self.size):
+            raise IndexError("Índice fora do intervalo válido.")
+        return self.vector[self.start + index]
